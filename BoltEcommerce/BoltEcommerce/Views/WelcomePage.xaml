@@ -4,7 +4,7 @@
              x:Class="BoltEcommerce.Views.WelcomePage">
 
     <controls:AnimationPage.PageAnimation>
-        <controls:FadePageAnimation Duration="Long" 
+        <controls:FadePageAnimation Duration="Medium" 
                                     Subtype="Default"
                                     />
     </controls:AnimationPage.PageAnimation>
