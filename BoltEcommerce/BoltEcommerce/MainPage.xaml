@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BoltEcommerce.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:res="clr-namespace:BoltEcommerce.Resources"
+             BackgroundColor="White">
+    <ScrollView VerticalOptions="FillAndExpand">
+        <StackLayout VerticalOptions="FillAndExpand"
+                     Margin="20,15"
+                     Spacing="15">
+            <ImageButton BackgroundColor="White"
+                         HorizontalOptions="Start"
+                         CornerRadius="15"
+                         Margin="-3,0,0,10">
+                <ImageButton.Source>
+                    <FontImageSource Color="#868A90" 
+                                     FontFamily="FontIcons"
+                                     Size="30"
+                                     Glyph="{x:Static res:IconFont.ArrowLeft}"/>
+                </ImageButton.Source>
+            </ImageButton>
+
+            <Label Text="Login"
+                   FontSize="35"
+                   TextColor="DimGray"
+                   Margin="0,0,0,75"/>
+            <Entry HorizontalOptions="FillAndExpand"
+                   Placeholder="Email" 
+                   TextColor="DimGray"
+                   Visual="Material"
+                   Keyboard="Email"
+                   ReturnType="Next"
+                   FontSize="20"
+                   BackgroundColor="White"/>
+            <Grid>
+                <Entry HorizontalOptions="FillAndExpand"
+                       Placeholder="Password"
+                       TextColor="DimGray"
+                       Visual="Material"
+                       IsPassword="True"
+                       Keyboard="Text"
+                       ReturnType="Go"
+                       FontSize="20"
+                       BackgroundColor="White"/>
+                <ImageButton BackgroundColor="White"
+                         HorizontalOptions="EndAndExpand"
+                             VerticalOptions="CenterAndExpand"
+                         CornerRadius="10">
+                    <ImageButton.Source>
+                        <FontImageSource Color="LightGray" 
+                                     FontFamily="FontIcons"
+                                     Size="32"
+                                     Glyph="{x:Static res:IconFont.Eye}"/>
+                    </ImageButton.Source>
+                </ImageButton>
+            </Grid>
+
+            <Button Text="Log in"
+                    CornerRadius="7"
+                    HeightRequest="55"
+                    TextColor="White"
+                    Margin="5,45,5,5">
+                <Button.Background>
+                    <LinearGradientBrush>
+                        <GradientStopCollection>
+                            <GradientStop Color="#667FEA" Offset="0"/>
+                            <GradientStop Color="#64B5FF" Offset="1"/>
+                        </GradientStopCollection>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label FontSize="16"
+                   HorizontalOptions="CenterAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Don't have an account ? "/>
+                            <Span Text="Sign Up" TextColor="DimGray" FontAttributes="Bold"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

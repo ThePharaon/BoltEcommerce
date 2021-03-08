@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:AnimationPage  xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BoltEcommerce.Views.WelcomePage">
+
+    <controls:AnimationPage.PageAnimation>
+        <controls:FadePageAnimation Duration="Long" 
+                                    Subtype="Default"
+                                    />
+    </controls:AnimationPage.PageAnimation>
+        <ScrollView VerticalScrollBarVisibility="Never"
+                    Margin="0,0,0,15">
+        <StackLayout>
+            <Label Text="Welcome to Bolt"
+                       TextColor="{StaticResource HeaderColor}"
+                       FontSize="22"
+                       HorizontalOptions="CenterAndExpand"
+                       Margin="0,50,0,0"/>
+            <Label Text="Explore Us"
+                       TextColor="{StaticResource NormalColor}"
+                       FontSize="16"
+                       HorizontalOptions="CenterAndExpand"
+                       Margin="0,0,0,100"/>
+            <Image Source="WelcomeImage.png" 
+                       Aspect="AspectFit"
+                       HeightRequest="200"
+                       HorizontalOptions="FillAndExpand"
+                       Margin="0,0,0,80"
+                       />
+            <Button Style="{StaticResource MainButton}"
+                        Text="Log in"
+                        Margin="45,0"
+                        x:Name="btnLogin"
+                        Clicked="btnLogin_Clicked"/>
+            <Label Text="Sign Up"
+                       TextColor="{StaticResource HeaderColor}"
+                       FontSize="13"
+                       FontAttributes="Bold"
+                       Margin="0,25"
+                       HorizontalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="lblSignUp" Tapped="lblSignUp_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ScrollView>
+</controls:AnimationPage>

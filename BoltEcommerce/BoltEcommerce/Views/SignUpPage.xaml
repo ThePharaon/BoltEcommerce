@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BoltEcommerce.Views.SignUpPage"
+             xmlns:res="clr-namespace:BoltEcommerce.Resources"
+             xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base">
+    <controls:AnimationPage.PageAnimation>
+        <controls:PushPageAnimation Duration="Short" 
+                                    Subtype="FromRight"
+                                    />
+    </controls:AnimationPage.PageAnimation>
+    <controls:AnimationPage.Content>
+        <ScrollView VerticalScrollBarVisibility="Never"
+                    Margin="0,0,0,15">
+            <StackLayout Margin="20,0"
+                         Spacing="15">
+                <ImageButton BackgroundColor="{StaticResource BackgroundColor}"
+                             HorizontalOptions="Start"
+                             CornerRadius="15"
+                             Margin="0,30,0,10"
+                             x:Name="btnBack"
+                             Clicked="btnBack_Clicked">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="FontIcons"
+                                         Color="Gray"
+                                         Glyph="{x:Static res:IconFont.ArrowLeft}"
+                                         Size="28"/>
+                    </ImageButton.Source>
+                </ImageButton>
+
+                <Label Text="Sign up"
+                       FontSize="32"
+                       TextColor="{StaticResource HeaderColor}"
+                       Margin="0,0,0,55"
+                       />
+                <Entry Style="{StaticResource MainEntry}"
+                       Placeholder="Name"
+                       Keyboard="Text"
+                       ReturnType="Next"/>
+                <Entry Style="{StaticResource MainEntry}"
+                       Placeholder="Email"
+                       Keyboard="Email"
+                       ReturnType="Next"/>
+                <Grid>
+                    <Entry Style="{StaticResource MainEntry}"
+                           Placeholder="Password"
+                           Keyboard="Text"
+                           ReturnType="Done"
+                           IsPassword="True"
+                           x:Name="txtPassword"/>
+                    <ImageButton BackgroundColor="{StaticResource BackgroundColor}"
+                             HorizontalOptions="End"
+                                 VerticalOptions="CenterAndExpand"
+                             CornerRadius="10"
+                                 x:Name="btnShowHide"
+                                 Clicked="btnShowHide_Clicked">
+                        <ImageButton.Source>
+                            <FontImageSource FontFamily="FontIcons"
+                                         Color="LightGray"
+                                         Glyph="{x:Static res:IconFont.Eye}"
+                                         Size="25"/>
+                        </ImageButton.Source>
+                    </ImageButton>
+                </Grid>
+
+                <Button Style="{StaticResource MainButton}"
+                        Text="Sign Up"
+                        Margin="10,40,10,0"
+                        x:Name="btnSignUp"
+                        Clicked="btnSignUp_Clicked"/>
+
+                <Label FontSize="14"
+                       HorizontalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Already have an acoount ? " 
+                                  TextColor="{StaticResource NormalColor}"/>
+                            <Span Text="Sign In" 
+                                  TextColor="{StaticResource HeaderColor}"
+                                  FontAttributes="Bold">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="OpenSignIn" Tapped="OpenSignIn_Tapped"/>
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </ScrollView>
+    </controls:AnimationPage.Content>
+</controls:AnimationPage>
